@@ -137,19 +137,19 @@ def on_message(client, userdata, msg):
         global humidAutoCtrl
         humidAutoCtrl = "HumidAutoOn"
 
-    if (str(msg.payload.decode("utf-8")) == "HumidAutoOff"):
+    elif (str(msg.payload.decode("utf-8")) == "HumidAutoOff"):
         print("가습기 제어를 수동모드로 변경합니다.")
         humidAutoCtrl = "HumidAutoOff"
     
-    if (str(msg.payload.decode("utf-8")) == "HumidOn"):
+    elif (str(msg.payload.decode("utf-8")) == "HumidOn"):
         print("가습기 켬")
         GPIO.output(relay_Pin, ON) # 가습기 On
     
-    if (str(msg.payload.decode("utf-8")) == "HumidOff"):
+    elif (str(msg.payload.decode("utf-8")) == "HumidOff"):
         print("가습기 끔")
         GPIO.output(relay_Pin, OFF) # 가습기 On
 
-    if (str(msg.payload.decode("utf-8")) == "LedOn"):
+    elif (str(msg.payload.decode("utf-8")) == "LedOn"):
         print("LED on")
         GPIO.output(4, GPIO.HIGH)
         for i in range(LED_COUNT):
@@ -157,13 +157,13 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "LedOff"):
+    elif (str(msg.payload.decode("utf-8")) == "LedOff"):
         print("LED off")
         GPIO.output(4, GPIO.LOW)
         colorWipe(strip, Color(0,0,0), 0)
         
     
-    if (str(msg.payload.decode("utf-8")) == "ylw1"):
+    elif (str(msg.payload.decode("utf-8")) == "ylw1"):
         print("ylw1 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_1)
@@ -171,7 +171,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "ylw2"):
+    elif (str(msg.payload.decode("utf-8")) == "ylw2"):
         print("ylw2 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_2)
@@ -179,7 +179,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "ylw3"):
+    elif (str(msg.payload.decode("utf-8")) == "ylw3"):
         print("ylw3 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
@@ -187,7 +187,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
 
-    if (str(msg.payload.decode("utf-8")) == "grn1"):
+    elif (str(msg.payload.decode("utf-8")) == "grn1"):
         print("grn1 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_1)
@@ -195,7 +195,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
 
-    if (str(msg.payload.decode("utf-8")) == "grn2"):
+    elif (str(msg.payload.decode("utf-8")) == "grn2"):
         print("grn2 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_2)
@@ -203,7 +203,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
 
-    if (str(msg.payload.decode("utf-8")) == "grn3"):
+    elif (str(msg.payload.decode("utf-8")) == "grn3"):
         print("grn3 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
@@ -211,7 +211,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
 
-    if (str(msg.payload.decode("utf-8")) == "blu1"):
+    elif (str(msg.payload.decode("utf-8")) == "blu1"):
         print("blu1 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_1)
@@ -219,7 +219,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
 
-    if (str(msg.payload.decode("utf-8")) == "blu2"):
+    elif (str(msg.payload.decode("utf-8")) == "blu2"):
         print("blu2 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_2)
@@ -227,7 +227,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "blu3"):
+    elif (str(msg.payload.decode("utf-8")) == "blu3"):
         print("blu3 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
@@ -235,7 +235,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "ppl1"):
+    elif (str(msg.payload.decode("utf-8")) == "ppl1"):
         print("ppl1 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
@@ -243,7 +243,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "ppl2"):
+    elif (str(msg.payload.decode("utf-8")) == "ppl2"):
         print("ppl2 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
@@ -251,7 +251,7 @@ def on_message(client, userdata, msg):
             strip.show()
         time.sleep(50/1000.0)
     
-    if (str(msg.payload.decode("utf-8")) == "ppl3"):
+    elif (str(msg.payload.decode("utf-8")) == "ppl3"):
         print("ppl3 on")
         for i in range(LED_COUNT):
             strip.setBrightness(brightness_3)
